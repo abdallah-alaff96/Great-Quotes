@@ -1,11 +1,12 @@
 import { Route, Switch, Redirect } from "react-router-dom";
+import Layout from "./components/layout/Layout";
 import AllQuotes from "./pages/AllQuotes";
 import NewQoute from "./pages/NewQuote";
 import QuoteDetail from "./pages/QuoteDetail";
 
 function App() {
   return (
-    <div>
+    <Layout>
       <Switch>
         <Route path="/" exact>
           <Redirect to="/quotes" />
@@ -20,7 +21,7 @@ function App() {
           <NewQoute />
         </Route>
       </Switch>
-    </div>
+    </Layout>
   );
 }
 
