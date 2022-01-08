@@ -1,7 +1,22 @@
+import QuoteList from "../components/quotes/QuoteList";
+
+const DUMMY_QUOTE = [
+  {
+    id: "q1",
+    author: "Max",
+    text: "Learning React is fun!",
+  },
+  {
+    id: "q2",
+    author: "Abdallah",
+    text: "Learning React is Great!",
+  },
+];
+
 const AllQuotes = () => {
   return (
     <div>
-      <p>All Quotes</p>
+      <QuoteList quotes={DUMMY_QUOTE} />
     </div>
   );
 };
