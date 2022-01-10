@@ -39,6 +39,8 @@ body {
 }
 
 .btn--flat {
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   font: inherit;
   color: teal;
