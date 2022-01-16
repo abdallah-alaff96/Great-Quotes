@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useHttp from "../../hooks/use-http";
 import { getAllComments } from "../../lib/api";
@@ -14,11 +14,15 @@ const Comments = () => {
 
   const { sendRequest, status, data } = useHttp(getAllComments);
 
+  useEffect(() => {
+    sendRequest(quoteId);
+  }, [sendRequest, quoteId]);
+
   const startAddCommentHandler = () => {
     setIsAddingComment(true);
   };
 
-  useEffect(() => {
+  const addCommentHandler = useCallback(() => {
     sendRequest(quoteId);
   }, [sendRequest, quoteId]);
 
@@ -48,7 +52,7 @@ const Comments = () => {
           Add a Comment
         </button>
       )}
-      {isAddingComment && <NewCommentForm />}
+      {isAddingComment && <NewCommentForm onAddComment={addCommentHandler} />}
       {comments}
     </section>
   );
