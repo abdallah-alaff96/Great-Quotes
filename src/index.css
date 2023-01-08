@@ -5,7 +5,7 @@
 body {
   font-family: sans-serif;
   margin: 0;
-  background-color: #e7f8f8;
+  background-color: #5e605c;
 }
 
 .centered {
@@ -19,23 +19,23 @@ body {
 .focused {
   font-size: 3rem;
   font-weight: bold;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .btn {
   text-decoration: none;
-  background-color: teal;
-  color: white;
+  background-color: #5e605c;
+  color: rgb(255, 255, 255);
   border-radius: 4px;
   padding: 0.75rem 1.5rem;
-  border: 1px solid teal;
+  border: 1px solid #b8df88;
   cursor: pointer;
 }
 
 .btn:hover,
 .btn:active {
-  background-color: #11acac;
-  border-color: #11acac;
+  background-color: #8c8e8a;
+  border-color: #b8df88;
 }
 
 .btn--flat {
@@ -43,7 +43,7 @@ body {
   justify-content: center;
   cursor: pointer;
   font: inherit;
-  color: teal;
+  color: #b8df88;
   border: none;
   background-color: none;
   text-decoration: none;
@@ -53,6 +53,6 @@ body {
 
 .btn--flat:hover,
 .btn--flat:active {
-  background-color: teal;
-  color: white;
+  background-color: #b8df88;
+  color: rgb(0, 0, 0);
 }
